@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { LoginDTO } from 'src/app/helpers/dto/loginDTO';
+
 
 @Component({
   selector: 'app-header',
@@ -10,9 +14,6 @@ export class HeaderComponent implements OnInit {
  model: any = {};
  ErrorMessage = "";
  loading = false;
- returnUrl: string;
- userLoggedIn: string;
- userLoggedInId: any;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
