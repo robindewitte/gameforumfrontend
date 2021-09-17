@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export class TokenService {
 
-  token: string;
+  private token: string = "";
 
   getToken() {
     return this.token;
