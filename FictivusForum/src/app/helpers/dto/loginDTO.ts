@@ -1,7 +1,7 @@
 export class LoginDTO{
    //region fields
-   private username: String;
-   private password: String;
+   private username!: String;
+   private password!: String;
    //endregion
 
    //region constructors
