@@ -11,11 +11,13 @@ import {TokenService} from './helpers/token.service';
 import {AuthGuardService} from './helpers/authguard.service';
 import {AuthInterceptor} from './helpers/auth-interceptor';
 import {AuthenticationService} from './services/authentication.service';
+import { RegisterpageComponent } from './components/registerpage/registerpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterpageComponent
   ],
   imports: [
     HttpClientModule,
