@@ -7,6 +7,7 @@ import { throwError } from 'rxjs';
 import { Util } from "../helpers/util";
 import { LoginDTO } from "../helpers/dto/loginDTO";
 import { RegisterDTO } from "../helpers/dto/registerDTO";
+import { TopicDTO } from '../helpers/dto/topicDTO';
 
 const httpOptions = {
   headers: new HttpHeaders(
@@ -32,7 +33,7 @@ export class AuthenticationService {
 
   //login
   public login(loginRequest: LoginDTO) {
-    return (this.http.post<any>(this.restData.getUrl('api/user/login'), loginRequest,
+    return (this.http.post<any>(this.restData.getUrl('api/account/login'), loginRequest,
     )).pipe(catchError(this.handleError));
   }
 
@@ -40,6 +41,21 @@ export class AuthenticationService {
    public register(registerRequest: RegisterDTO) {
     return (this.http.post<any>(this.restData.getUrl('api/user/register'), registerRequest,
     )).pipe(catchError(this.handleError));
+  }
+
+  //delete when possible
+  public testCQRS1(topic: TopicDTO){
+    return (this.http.post<any>(this.restData.getUrl('api/write/writeMock'), topic, ).pipe(catchError(this.handleError)));
+  }
+
+  //delete when possible
+  public testCQRS2(searchterm: string){
+    return (this.http.get<any>(this.restData.getUrl('api/search/getPostsByTerm/'+searchterm+''))).pipe(catchError(this.handleError));
+  }
+
+  //delete when possible
+  public testCQRS3(topic: TopicDTO){
+    return (this.http.post<any>(this.restData.getUrl('api/search/writeMockCheck'), topic, ).pipe(catchError(this.handleError)));
   }
 
 }
