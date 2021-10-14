@@ -17,14 +17,11 @@ export class HomepageComponent implements OnInit {
 
   testCQRS1(){
     let dto = new TopicDTO("mocklord", "zijn er nog frikandellen?" , new Date());
-    this.authenticationService.testCQRS1(dto);
-  }
-
-  testCQRS2(){
-    this.authenticationService.testCQRS2("mock").subscribe(
+    console.log(new Date() + "cqrs1send");
+    this.authenticationService.testCQRS1(dto).subscribe(
       data => {
         if(data.response != null ){
-          console.log(new Date());
+          console.log(new Date() + "cqrs1recieve");
           console.log(data);
         }else{
           console.log("niks");
@@ -34,9 +31,38 @@ export class HomepageComponent implements OnInit {
         console.log("fout");
       });
   }
+
+  testCQRS2(){
+    console.log(new Date() + "cqrs2send");
+    this.authenticationService.testCQRS2("mock").subscribe(
+      data => {
+        if(data.response != null ){
+          console.log(new Date() + "cqrs2recieve");
+          console.log(data);
+        }else{
+          console.log("niks");
+        }   
+      },
+      error => {
+        console.log("fout");
+      });
+  }
+
   testCQRS3(){
+    console.log(new Date() + "cqrs3send")
     let dto = new TopicDTO("mocklord", "zijn er nog frikandellen?" , new Date());
-    this.authenticationService.testCQRS3(dto);
+    this.authenticationService.testCQRS3(dto).subscribe(
+      data => {
+        if(data.response != null ){
+          console.log(new Date() + "cqrs3recieve");
+          console.log(data);
+        }else{
+          console.log("niks");
+        }   
+      },
+      error => {
+        console.log("fout");
+      });
   }
 
 }

@@ -45,7 +45,7 @@ export class AuthenticationService {
 
   //delete when possible
   public testCQRS1(topic: TopicDTO){
-    return (this.http.post<any>(this.restData.getUrl('api/write/writeMock'), topic, ).pipe(catchError(this.handleError)));
+    return (this.http.post<any>(this.restData.getUrl('api/write/writeMock'), topic, )).pipe(catchError(this.handleError));
   }
 
   //delete when possible
@@ -55,7 +55,7 @@ export class AuthenticationService {
 
   //delete when possible
   public testCQRS3(topic: TopicDTO){
-    return (this.http.post<any>(this.restData.getUrl('api/search/writeMockCheck'), topic, ).pipe(catchError(this.handleError)));
+    return (this.http.post<any>(this.restData.getUrl('api/write/writeMockCheck'), topic, )).pipe(catchError(this.handleError));
   }
 
 }

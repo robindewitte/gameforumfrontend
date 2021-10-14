@@ -4,7 +4,7 @@ export class Restdata {
 
 //voor nu nog even localhost
 //  private url = 'http://192.168.178.39:30001/';
-private url = 'http://localhost:8123/'
+private url = 'http://localhost:5001/'
 
 
   public httpOptionsToken = { 
@@ -15,7 +15,7 @@ private url = 'http://localhost:8123/'
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' +sessionStorage.getItem('token'),
-      'Access-Control-Allow-Origin': 'http://localhost:8123/',
+      'Access-Control-Allow-Origin': 'http://localhost:5001/',
       'Access-Control-Allow-Credentials': 'true'
     })
   };
