@@ -13,13 +13,15 @@ import {AuthInterceptor} from './helpers/auth-interceptor';
 import {AuthenticationService} from './services/authentication.service';
 import { RegisterpageComponent } from './components/registerpage/registerpage.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { ModreleaseComponent } from './components/modrelease/modrelease/modrelease.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RegisterpageComponent,
-    HomepageComponent
+    HomepageComponent,
+    ModreleaseComponent
   ],
   imports: [
     HttpClientModule,
