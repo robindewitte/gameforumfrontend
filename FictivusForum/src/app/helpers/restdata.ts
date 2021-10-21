@@ -3,7 +3,8 @@ import {HttpHeaders} from "@angular/common/http";
 export class Restdata {
 
 //voor nu nog even localhost
-  private url = 'http://192.168.178.39:30001/';
+//  private url = 'http://192.168.178.39:30001/';
+private url = 'http://localhost:5001/'
 
 
   public httpOptionsToken = { 
@@ -14,7 +15,7 @@ export class Restdata {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' +sessionStorage.getItem('token'),
-      'Access-Control-Allow-Origin': 'http://192.168.178.39:30001/',
+      'Access-Control-Allow-Origin': 'http://localhost:5001/',
       'Access-Control-Allow-Credentials': 'true'
     })
   };

@@ -47,7 +47,7 @@ export class HeaderComponent implements OnInit {
   setStorageData(data: any){
     localStorage.setItem('token', data);
     localStorage.setItem('username', this.model.username);
-    this.router.navigateByUrl('/dashboard');
+    this.router.navigateByUrl('/home');
   }
 
 }

@@ -3,7 +3,7 @@
     <h2>The most imaginary game!</h2>
   </div>  
   <form class="card center" autocomplete="off" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
-      <p>Login</p>
+      <p>Please login or <a (click)="ToRegister()">Register</a></p>
       <div class="input-field" [ngClass]="{ 'has-error': f.submitted}">
         <input type="text" id="username" name="username" [(ngModel)]="model.username" #username="ngModel" required />
         <label for="username">username</label>
@@ -16,7 +16,6 @@
       </div>
       <div class="row no-margin">
         <button [disabled]="loading" id="submit" class="btn">Login</button>
-        <button (click)="ToRegister()" >Register</button>  
       </div>
         <p class="error">{{ErrorMessage}}</p>
     </form>
