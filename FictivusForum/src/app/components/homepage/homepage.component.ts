@@ -17,52 +17,69 @@ export class HomepageComponent implements OnInit {
 
   testCQRS1(){
     let dto = new TopicDTO("mocklord", "zijn er nog frikandellen?" , new Date());
-    console.log(new Date() + "cqrs1send");
+    console.log(new Date().getTime() + "cqrs1send");
     this.authenticationService.testCQRS1(dto).subscribe(
       data => {
         if(data.response != null ){
-          console.log(new Date() + "cqrs1recieve");
+          console.log(new Date().getTime() + "cqrs1recieve");
           console.log(data);
         }else{
-          console.log("niks");
+          console.log("cqrs1niks");
         }   
       },
       error => {
-        console.log("fout");
+        console.log("cqrs1fout");
       });
   }
 
   testCQRS2(){
-    console.log(new Date() + "cqrs2send");
+    console.log(new Date().getTime() + "cqrs2send");
     this.authenticationService.testCQRS2("mock").subscribe(
       data => {
-        if(data.response != null ){
-          console.log(new Date() + "cqrs2recieve");
+        if(data != null ){
+          console.log(new Date().getTime() + "cqrs2recieve");
           console.log(data);
         }else{
-          console.log("niks");
+          console.log("cqrs2niks");
+          console.log(data);
         }   
       },
       error => {
-        console.log("fout");
+        console.log("cqrs2fout");
       });
   }
 
   testCQRS3(){
-    console.log(new Date() + "cqrs3send")
+    console.log(new Date().getTime() + "cqrs3send")
     let dto = new TopicDTO("mocklord", "zijn er nog frikandellen?" , new Date());
     this.authenticationService.testCQRS3(dto).subscribe(
       data => {
         if(data.response != null ){
-          console.log(new Date() + "cqrs3recieve");
+          console.log(new Date().getTime() + "cqrs3recieve");
           console.log(data);
         }else{
-          console.log("niks");
+          console.log("cqrs3niks");
         }   
       },
       error => {
-        console.log("fout");
+        console.log("cqrs3fout");
       });
+  }
+  testCQRS4(){
+    this.testCQRS2();
+    this.testCQRS2();
+    this.testCQRS1();
+    this.testCQRS2();
+    this.testCQRS2();
+    this.testCQRS2();
+    this.testCQRS1();
+    this.testCQRS2();
+    this.testCQRS2();
+    this.testCQRS2();
+    this.testCQRS1();
+    this.testCQRS1();
+    this.testCQRS2();
+    this.testCQRS2();
   }
 
 }
