@@ -14,6 +14,8 @@ import {AuthenticationService} from './services/authentication.service';
 import { RegisterpageComponent } from './components/registerpage/registerpage.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { ModreleaseComponent } from './components/modrelease/modrelease/modrelease.component';
+import { DiscussieComponent } from './components/discussie/discussie.component';
+import { MemesComponent } from './components/memes/memes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ModreleaseComponent } from './components/modrelease/modrelease/modrelea
     HeaderComponent,
     RegisterpageComponent,
     HomepageComponent,
-    ModreleaseComponent
+    ModreleaseComponent,
+    DiscussieComponent,
+    MemesComponent
   ],
   imports: [
     HttpClientModule,

@@ -21,5 +21,5 @@ const httpOptions = {
 })
 export class WriteserviceService {
 
-  constructor(private http: HttpClient, private router: Router, private restData: Restdata)) { }
+  constructor(private http: HttpClient, private router: Router, private restData: Restdata) { }
 }
