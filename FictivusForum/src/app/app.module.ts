@@ -16,6 +16,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { ModreleaseComponent } from './components/modrelease/modrelease/modrelease.component';
 import { DiscussieComponent } from './components/discussie/discussie.component';
 import { MemesComponent } from './components/memes/memes.component';
+import { TopicbuilderComponent } from './components/topicbuilder/topicbuilder.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MemesComponent } from './components/memes/memes.component';
     HomepageComponent,
     ModreleaseComponent,
     DiscussieComponent,
-    MemesComponent
+    MemesComponent,
+    TopicbuilderComponent
   ],
   imports: [
     HttpClientModule,

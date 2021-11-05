@@ -1,0 +1,11 @@
+<div>
+    <h2>maak hier uw topic</h2>
+    <form class="card center" autocomplete="off" name="form" (ngSubmit)="f.form.valid && postTopic()" #f="ngForm" novalidate>
+        <label for="postmessage">Titel</label>
+        <input type="text" id="topicTitle" name="topicTitle" [(ngModel)]="model.topicTitle" #username="ngModel" required />
+        <label for="postmessage">Inhoud</label>
+        <input type="text" id="content" name="content" [(ngModel)]="model.content" #username="ngModel" required />
+        <button id="submit" class="btn">Plaats</button>
+        <p class="error">{{ErrorMessage}}</p>
+    </form>
+</div>
