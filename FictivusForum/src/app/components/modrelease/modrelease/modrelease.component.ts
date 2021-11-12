@@ -37,4 +37,8 @@ export class ModreleaseComponent implements OnInit {
     }
   }
 
+  GoToTopic(topicTitleChosen: string){
+    
+  }
+
 }

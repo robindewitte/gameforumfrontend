@@ -1,17 +1,17 @@
 <div>
     <table>
         <thead>
-            <th><t3>Titel</t3></th>
-            <th><t3>Gebruiker</t3></th>
+            <th><h3>Titel</h3></th>
+            <th><h3>Gebruiker</h3></th>
         </thead>
         <tbody>
-            <tr  *ngFor="let topic of topic">
+            <tr  *ngFor="let topic of topics">
                 <td><a (click)="GoToTopic(topic.title)">{{topic.title}}</a></td>
-                <td>{{topic.username}}</td>
+                <td>{{topic.userName}}</td>
             </tr> 
          </tbody>
     </table>
-    <button (click)="postTopic()">Post Topic</button>
+    <button (click)="PostTopic()">Post Topic</button>
 <p class="error">{{ErrorMessage}}</p>
-<topicbuilder *ngIf="!called" [subject]="memes"></topicbuilder>
+<app-topicbuilder *ngIf="called" [subject]="'memes'"></app-topicbuilder>
 </div>

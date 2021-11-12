@@ -17,7 +17,7 @@ export class HomepageComponent implements OnInit {
   }
 
 
-  GoToModReleases(){
+  GoToModRelease(){
     this.router.navigateByUrl("modreleases");
   }
   GoToDiscussie(){

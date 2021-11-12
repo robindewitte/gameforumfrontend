@@ -10,8 +10,7 @@ import { Writeservice } from 'src/app/services/write.service';
 })
 export class TopicbuilderComponent implements OnInit {
 
-  @Input()
-  subject: string ="";
+  @Input() public subject: string ="";
 
 
 

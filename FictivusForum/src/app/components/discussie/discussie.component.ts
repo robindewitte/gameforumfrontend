@@ -37,4 +37,8 @@ export class DiscussieComponent implements OnInit {
     }
   }
 
+  GoToTopic(topicTitleChosen: string){
+    
+  }
+
 }

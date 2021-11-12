@@ -37,4 +37,8 @@ export class MemesComponent implements OnInit {
     }
   }
 
+  GoToTopic(topicTitleChosen: string){
+    
+  }
+
 }
