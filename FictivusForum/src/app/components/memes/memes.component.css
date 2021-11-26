@@ -1,3 +1,24 @@
 table {
     border: 1px;
+    border-style: solid;
+    width: 80%;
+}
+
+td{
+    display: inline-flex;
+}
+
+.tabledesig{
+    width: 20%;
+    border-style: solid;
+    height:50px;
+}
+
+.tabledescr{
+    width:70%;
+    border-style: solid;
+}
+
+a{
+ color: blue;    
 }

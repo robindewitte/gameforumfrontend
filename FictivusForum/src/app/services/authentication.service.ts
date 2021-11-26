@@ -39,23 +39,9 @@ export class AuthenticationService {
 
    //register
    public register(registerRequest: RegisterDTO) {
-    return (this.http.post<any>(this.restData.getUrl('api/user/register'), registerRequest,
+    return (this.http.post<any>(this.restData.getUrl('api/account/register'), registerRequest,
     )).pipe(catchError(this.handleError));
   }
 
-  //delete when possible
-  public testCQRS1(topic: TopicDTO){
-    return (this.http.post<any>(this.restData.getUrl('api/write/writeMock'), topic, )).pipe(catchError(this.handleError));
-  }
-
-  //delete when possible
-  public testCQRS2(searchterm: string){
-    return (this.http.get<any>(this.restData.getUrl('api/search/getPostsByTerm/'+searchterm+''))).pipe(catchError(this.handleError));
-  }
-
-  //delete when possible
-  public testCQRS3(topic: TopicDTO){
-    return (this.http.post<any>(this.restData.getUrl('api/write/writeMockCheck'), topic, )).pipe(catchError(this.handleError));
-  }
 
 }

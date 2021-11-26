@@ -47,10 +47,10 @@ export class Readservice{
   }
 
   public GetAllModReleaseTopics(){
-    return (this.http.get<any>(this.restData.getUrl('api/search/GetModReleaseTopics'))).pipe(catchError(this.handleError));
+    return (this.http.get<any>(this.restData.getUrl('api/search/GetModReleasesTopics'))).pipe(catchError(this.handleError));
   }
   public GetModReleasePostsBySearchterm(term: string){
-    return (this.http.get<any>(this.restData.getUrl('api/search/GetModReleasePostsBySearchTerm/'+term+''))).pipe(catchError(this.handleError));
+    return (this.http.get<any>(this.restData.getUrl('api/search/GetModReleasesPostsBySearchTerm/'+term+''))).pipe(catchError(this.handleError));
   }
   public GetAllDiscussionTopics(){
     return (this.http.get<any>(this.restData.getUrl('api/search/GetDiscussion'))).pipe(catchError(this.handleError));

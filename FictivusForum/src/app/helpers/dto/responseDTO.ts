@@ -4,5 +4,6 @@ export class ResponseDTO{
         public userName:string = "",
         public timeOfPosting:Date = new Date(),
         public content:string = "",
+        public topicSubject:string = "",
     ){}
 }

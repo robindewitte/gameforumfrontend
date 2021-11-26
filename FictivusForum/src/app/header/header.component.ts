@@ -20,7 +20,11 @@ export class HeaderComponent implements OnInit {
     private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem("username") != null){
+      this.ErrorMessage = "U bent ingelogd als "+localStorage.getItem("username")+""
+    }
   }
+
 
   login() {
     let dto = new LoginDTO();
@@ -31,6 +35,7 @@ export class HeaderComponent implements OnInit {
         data => {
           if(data != "Verkeerd"){
             this.setStorageData(data);
+            this.ErrorMessage = "U bent ingelogd als "+this.model.username+""
           }else{
             this.ErrorMessage = "Something went wrong! Did you enter the correct credentials?";
           }   

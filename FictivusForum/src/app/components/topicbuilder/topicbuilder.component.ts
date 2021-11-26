@@ -33,6 +33,7 @@ export class TopicbuilderComponent implements OnInit {
     responseDTO.timeOfPosting =  new Date();
     responseDTO.topicTitle =  this.model.topicTitle;
     responseDTO.content = this.model.content;
+    responseDTO.topicSubject = this.subject;
     this.writeService.PostTopic(topicDTO).subscribe(
       data => {
         if(data.includes("FOUT!") ){

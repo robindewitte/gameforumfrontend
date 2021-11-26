@@ -30,6 +30,8 @@ export class DiscussieComponent implements OnInit {
 
   PostTopic(){
     if(localStorage.getItem("username") != null && localStorage.getItem("token") != null){
+      console.log(localStorage.getItem("username"));
+      console.log(localStorage.getItem("token"));
       this.called = true;
     }
     else{
