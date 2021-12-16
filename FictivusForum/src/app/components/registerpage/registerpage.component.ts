@@ -25,16 +25,13 @@ export class RegisterpageComponent implements OnInit {
    register() {
      this.loading = true;
      let dto = new RegisterDTO(this.formContent.username, this.formContent.email, this.formContent.password, this.formContent.passwordConfirm);
-     console.log(JSON.stringify(dto));
      this.authenticationService.register(dto)
        .subscribe(
          data => {
-           console.log(data);
            if(data == "FOUT! De ingevoerde gegevens voldoen niet aan de eisen."){
              alert(data);
            }
            else{
-             console.log(data);
              this.loading = false;
              this.resultMsg = data;
              this.router.navigateByUrl("home");

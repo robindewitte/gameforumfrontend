@@ -20,14 +20,14 @@
 
             <div class="col-md-12">
                 <div class="form-group">
-                    <input id="password" class="form-control" type="text" name="password"
+                    <input type="hidden" id="password" class="form-control" type="password" name="password"
                         [(ngModel)]="formContent.password" ngDefaultControl #password="ngModel" placeholder="Password:"
                         required>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <input id="passwordConfirm" class="form-control" type="text" name="passwordConfirm"
+                    <input type="hidden" id="passwordConfirm" class="form-control" type="password" name="passwordConfirm"
                         [(ngModel)]="formContent.passwordConfirm" ngDefaultControl #passwordConfirm="ngModel"
                         placeholder="Password Confirmation:" required>
                 </div>

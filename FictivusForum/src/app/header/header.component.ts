@@ -20,8 +20,8 @@ export class HeaderComponent implements OnInit {
     private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem("username") != null){
-      this.ErrorMessage = "U bent ingelogd als "+localStorage.getItem("username")+""
+    if(sessionStorage.getItem("username") != null){
+      this.ErrorMessage = "U bent ingelogd als "+sessionStorage.getItem("username")+""
     }
   }
 
@@ -50,8 +50,8 @@ export class HeaderComponent implements OnInit {
   }
 
   setStorageData(data: any){
-    localStorage.setItem('token', data);
-    localStorage.setItem('username', this.model.username);
+    sessionStorage.setItem('token', data);
+    sessionStorage.setItem('username', this.model.username);
     this.router.navigateByUrl('/home');
   }
 

@@ -26,17 +26,17 @@ export class TopicbuilderComponent implements OnInit {
     let topicDTO = new TopicDTO();
     let responseDTO = new ResponseDTO();
     topicDTO.title = this.model.topicTitle;
-    topicDTO.userName = localStorage.getItem("username") as string;
+    topicDTO.userName = sessionStorage.getItem("username") as string;
     topicDTO.timeOfPosting = new Date();
     topicDTO.subject = this.subject;
-    responseDTO.userName = localStorage.getItem("username") as string;
+    responseDTO.userName = sessionStorage.getItem("username") as string;
     responseDTO.timeOfPosting =  new Date();
     responseDTO.topicTitle =  this.model.topicTitle;
     responseDTO.content = this.model.content;
     responseDTO.topicSubject = this.subject;
     this.writeService.PostTopic(topicDTO).subscribe(
       data => {
-        if(data.includes("FOUT!") ){
+        if(data == false){
           alert(data);
         }else{
           this.ErrorMessage = "geplaatst";
@@ -47,7 +47,7 @@ export class TopicbuilderComponent implements OnInit {
      });
       this.writeService.PostResponse(responseDTO).subscribe(
         data => {
-          if(data.includes("FOUT!") ){
+          if(data == false){
             alert(data);
           }else{
             this.ErrorMessage = "geplaatst";

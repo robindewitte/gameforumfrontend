@@ -29,7 +29,7 @@ export class MemesComponent implements OnInit {
   }
 
   PostTopic(){
-    if(localStorage.getItem("username") != null && localStorage.getItem("token") != null){
+    if(sessionStorage.getItem("username") != null && sessionStorage.getItem("token") != null){
       this.called = true;
     }
     else{
