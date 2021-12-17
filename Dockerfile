@@ -6,7 +6,7 @@ ENV ANGULAR_APP_API_GATEWAY ${APIGATEWAY_URL}}
 ARG APP_URL="http://localhost:4200"
 ENV ANGULAR_APP_URL = ${APP_URL}
 
-COPY FictivusForum/package*.json ./
+COPY package*.json ./
 RUN npm install
 COPY . /app
 RUN npm run build --prod
