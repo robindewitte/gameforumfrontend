@@ -1,7 +1,7 @@
 FROM node:lts-alpine as build-stage
 WORKDIR /app
 
-ARG APIGATEWAY_URL="http://localhost:5001"
+ARG APIGATEWAY_URL="gateway/"
 ENV ANGULAR_APP_API_GATEWAY ${APIGATEWAY_URL}}
 ARG APP_URL="http://localhost:4200"
 ENV ANGULAR_APP_URL = ${APP_URL}
