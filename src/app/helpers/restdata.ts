@@ -4,7 +4,7 @@ export class Restdata {
 
 //voor nu nog even localhost
 //  private url = 'http://localhost:5001/';
-private url = 'gateway/'
+private url = 'gateway.default.svc.cluster.local:5001/'
 
 
   public httpOptionsToken = { 
@@ -15,7 +15,7 @@ private url = 'gateway/'
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' +sessionStorage.getItem("token"),
-      'Access-Control-Allow-Origin': 'gateway/',
+      'Access-Control-Allow-Origin': 'gateway.default.svc.cluster.local:5001/',
       'Access-Control-Allow-Credentials': 'true'
     })
   };
