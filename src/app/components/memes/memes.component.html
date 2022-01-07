@@ -11,7 +11,7 @@
             </tr> 
          </tbody>
     </table>
-    <button (click)="PostTopic()">Post Topic</button>
+    <button id="postmemetopicbutton" (click)="PostTopic()">Post Topic</button>
 <p class="error">{{ErrorMessage}}</p>
 <app-topicbuilder *ngIf="called" [subject]="'memes'"></app-topicbuilder>
 </div>
