@@ -18,6 +18,7 @@ export class MemesComponent implements OnInit {
     this.readService.GetAllMemeTopics().subscribe(
       data => {
         if(data != null ){
+          console.log(data);
           this.topics = data;         
         }else{
           this.ErrorMessage = "geen berichten gevonden";
